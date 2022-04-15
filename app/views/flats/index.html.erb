@@ -1,9 +1,10 @@
+<%= link_to "Add Flat", new_flat_path %>
 <div class="container">
 <h1>All Flats (<%= Flat.count %>)</h1>
 <div class="cards">
 <% @flats.each do |flat| %>
 <div class="card">
-  <h3><%= flat.name %></h3>
+  <h3><%= link_to flat.name, flat_path(flat) %></h3>
   <p><%= flat.address %></p>
   <div class="icons">
     <div><i class="fa-solid fa-user-group"></i><%= flat.number_of_guests %></div>

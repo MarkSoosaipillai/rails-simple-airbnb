@@ -1,14 +1,2 @@
 <h2>New Flat</h2>
-<%= form_for(@flat) do |f| %>
-  Name: <%= f.text_field :name %>
-  <br><br>
-  Address: <%= f.text_field :address %>
-  <br><br>
-  Description: <%= f.text_field :description %>
-  <br><br>
-  Number of Guests: <%= f.number_field :number_of_guests %>
-  <br><br>
-  Price per Night: <%= f.number_field :price_per_night %>
-  <br><br>
-  <%= f.submit %>
-<% end %>
+<%= render "form", flat: @flat%>

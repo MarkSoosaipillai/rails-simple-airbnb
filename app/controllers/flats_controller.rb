@@ -17,6 +17,10 @@ class FlatsController < ApplicationController
     redirect_to flat_path(@flat)
   end
 
+  def edit
+    @flat = Flat.new
+  end
+
   private
 
   def flat_params
